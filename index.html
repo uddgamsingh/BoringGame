@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Uddgam Game Plaza — 23 Free Games</title>
+<title>Uddgam Game Plaza — 29 Free Games</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -262,12 +262,68 @@ footer{text-align:center;color:var(--mute);margin-top:36px;font-size:14px}
 .slpanel{display:flex;align-items:center;justify-content:center;gap:18px;padding:12px 22px;border-radius:22px;background:linear-gradient(160deg,#134e4a,#1e293b);border:1px solid var(--line);box-shadow:0 14px 30px -14px #000}
 .slpanel .die{font-size:64px;line-height:1;filter:drop-shadow(0 6px 6px rgba(0,0,0,.5))}.slpanel .turn{font-weight:700;font-size:19px;margin-bottom:6px}
 .sllegend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-size:13px;color:var(--mute)}.sllegend span{background:rgba(255,255,255,.07);padding:4px 12px;border-radius:999px}
+
+/* ===== new games ===== */
+/* battleship */
+.bsst{min-height:26px}.bsarena{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}.bsside{display:flex;flex-direction:column;align-items:center;gap:8px}.bsside h4{margin:0;font-family:Orbitron,sans-serif;font-size:13px;letter-spacing:.08em;color:#7dd3fc}
+.bsgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:2px;width:min(92vw,400px,calc((100vh - 330px)));min-width:260px;aspect-ratio:1;padding:8px;border-radius:16px;background:linear-gradient(160deg,#0c4a6e,#082f49);box-shadow:0 18px 40px -16px #000,inset 0 0 40px rgba(56,189,248,.25);border:2px solid #38bdf8}
+.bsgrid button{position:relative;border:0;padding:0;border-radius:4px;background:linear-gradient(160deg,#0ea5e9,#0369a1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);cursor:crosshair}
+.bsgrid.en button:hover{filter:brightness(1.35);box-shadow:inset 0 0 0 2px #fde047}
+.bsgrid button.sh{background:linear-gradient(180deg,#cbd5e1,#64748b 60%,#475569);box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),inset 0 3px 3px rgba(255,255,255,.5)}
+.bsgrid button.sh.h.s{border-radius:50% 4px 4px 50%}.bsgrid button.sh.h.e{border-radius:4px 14px 14px 4px}.bsgrid button.sh.v.s{border-radius:50% 50% 4px 4px}.bsgrid button.sh.v.e{border-radius:4px 4px 14px 14px}
+.bsgrid button.hit{background:radial-gradient(circle,#fb923c,#b91c1c)}.bsgrid button.snk{background:linear-gradient(#7f1d1d,#450a0a)}
+.bsgrid button i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;font-size:min(3vw,18px);animation:bpop .35s}
+.bsgrid button.miss i::after{content:"";width:34%;aspect-ratio:1;border-radius:50%;background:#e0f2fe;box-shadow:0 0 0 4px rgba(224,242,254,.3),0 0 0 8px rgba(224,242,254,.12)}
+@keyframes bpop{from{transform:scale(2.4);opacity:0}to{transform:scale(1);opacity:1}}
+.bsarena.setup .bsgrid.en{filter:grayscale(.7) brightness(.55);pointer-events:none}
+.bsfleet{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;max-width:400px}.bsfleet span{font-size:12px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;padding:2px 10px}.bsfleet em{font-style:normal;letter-spacing:1px;color:#7dd3fc;margin-left:6px;font-size:10px}.bsfleet .dead{opacity:.5;text-decoration:line-through}.bsfleet .dead em{color:#f87171}
+.bsvis{display:flex;gap:14px;align-items:center;justify-content:center;font-size:20px}.bsvis .bv{padding:2px 12px;border-radius:8px}.bsvis .sh{background:linear-gradient(#cbd5e1,#64748b);color:#475569;letter-spacing:-3px}.bsvis .hit{background:#b91c1c}.bsvis .miss{background:#0ea5e9;color:#fff}.bsvis small{color:var(--mute)}
+/* checkers */
+.ckb{display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);width:max(320px,min(94vw,640px,calc(100vh - 340px)));aspect-ratio:1;border-radius:10px;overflow:hidden;box-shadow:0 0 0 9px #5b3a1e,0 0 0 12px #e0b060,0 24px 50px -16px #000}
+.ckb>div{display:grid;place-items:center;position:relative;min-width:0;min-height:0;cursor:pointer}.ckb .lt{background:linear-gradient(135deg,#f6e7c8,#e8d3a4)}.ckb .dk{background:linear-gradient(135deg,#5a3a24,#3e2616)}
+.ckb .lm{box-shadow:inset 0 0 0 100px rgba(255,214,10,.22)}.ckb .sel{box-shadow:inset 0 0 0 100px rgba(80,255,120,.3)}
+.ckb .tg::after{content:"";width:30%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#86efac,#16a34a);box-shadow:0 0 12px #4ade80}
+.pcs{display:inline-grid;place-items:center;width:76%;aspect-ratio:1;border-radius:50%;box-shadow:0 5px 6px rgba(0,0,0,.5),inset 0 -5px 8px rgba(0,0,0,.35),inset 0 4px 6px rgba(255,255,255,.4);font-size:min(4.5vw,30px);color:#fde68a;transition:transform .12s}
+.pcs.r{background:radial-gradient(circle at 35% 30%,#fca5a5,#dc2626 55%,#7f1d1d);border:3px solid #fecaca66}.pcs.b{background:radial-gradient(circle at 35% 30%,#9ca3af,#1f2937 55%,#030712);border:3px solid #ffffff33}
+.pcs.k{outline:3px solid #fbbf24;outline-offset:-8px}.ckb>div:hover .pcs{transform:scale(1.07)}.pcs.must{animation:mustp .8s infinite alternate}@keyframes mustp{to{box-shadow:0 0 0 3px #fde047,0 0 18px #fde047}}
+.cktray{width:max(320px,min(94vw,640px,calc(100vh - 340px)));display:flex;gap:12px;align-items:center;padding:6px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:14px}.cktray em{margin-left:auto;font-style:normal;color:var(--mute);font-size:13px}
+.ckvis{font-size:14px;line-height:2.4;color:#c7cbf0}.ckvis .pcs{width:26px;vertical-align:middle;font-size:15px}.ckvis i{font-style:normal;margin-left:8px;color:var(--mute)}.ckvis b{margin:0 6px}
+/* word guess */
+.wgb{display:grid;gap:6px}.wr{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.wr i{width:min(14vw,62px);aspect-ratio:1;display:grid;place-items:center;border:2px solid #3b4177;border-radius:8px;font-style:normal;font-weight:800;font-size:min(8vw,32px);font-family:'Baloo 2',sans-serif;background:rgba(255,255,255,.04);transition:transform .45s,background .2s}
+.wr i.f{border-color:#7a82c8}.wr i.pop{animation:wpop .12s}@keyframes wpop{50%{transform:scale(1.15)}}
+.wr i.rv{animation:wflip .5s both;border-color:transparent}.wr i.rv.g{background:#16a34a}.wr i.rv.y{background:#ca8a04}.wr i.rv.n{background:#2d3157}
+@keyframes wflip{0%{transform:rotateX(0)}50%{transform:rotateX(90deg)}100%{transform:rotateX(0)}}
+.wr.shk{animation:shake .35s}.wr.win i{animation:wjump .5s both}.wr.win i:nth-child(2){animation-delay:.08s}.wr.win i:nth-child(3){animation-delay:.16s}.wr.win i:nth-child(4){animation-delay:.24s}.wr.win i:nth-child(5){animation-delay:.32s}@keyframes wjump{50%{transform:translateY(-14px)}}
+.wgk{display:grid;gap:6px;width:min(96vw,520px)}.wgk div{display:flex;gap:5px;justify-content:center}.wgk button{flex:1;max-width:46px;height:52px;border:0;border-radius:8px;background:#3b4177;color:#fff;font-weight:700;font-size:15px}.wgk button.wide{max-width:70px;flex:1.6}.wgk button.g{background:#16a34a}.wgk button.y{background:#ca8a04}.wgk button.n{background:#1a1d3d;color:#6b7099}
+.wgvis{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.wgvis span{width:38px;height:38px;display:grid;place-items:center;border-radius:8px;font-weight:800}.wgvis .g{background:#16a34a}.wgvis .y{background:#ca8a04}.wgvis .n{background:#2d3157}.wgvis small{flex-basis:100%;color:var(--mute);margin-top:4px}
+/* sudoku */
+.sdk{display:grid;grid-template-columns:repeat(9,1fr);width:max(300px,min(94vw,500px,calc(100vh - 330px)));aspect-ratio:1;border:3px solid #a5b4fc;border-radius:10px;overflow:hidden;background:#0f1230;box-shadow:0 18px 40px -16px #000}
+.sdk button{border:0;border-right:1px solid #2a2f63;border-bottom:1px solid #2a2f63;background:#151a3e;color:#93c5fd;font-weight:600;font-size:min(5vw,24px);padding:0;position:relative;min-width:0;font-family:'Baloo 2',sans-serif}
+.sdk button.rb{border-right:2px solid #a5b4fc}.sdk button.bb{border-bottom:2px solid #a5b4fc}.sdk .gv{color:#fff;font-weight:800;background:#1b2150}.sdk .pr{background:#222a63}.sdk .sm{background:#3b4a9e}.sdk .sel{background:#5b6cf0!important;color:#fff}.sdk .bd{color:#fb7185!important;background:#3a1530}
+.sdk u{position:absolute;inset:1px;display:grid;grid-template-columns:repeat(3,1fr);text-decoration:none}.sdk s{text-decoration:none;font-size:min(2.2vw,10px);color:#a5b4fc;display:grid;place-items:center;font-weight:500}
+.sdp{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;width:min(94vw,500px)}.sdp button{flex:1;min-width:34px;height:46px;border:1px solid var(--line);background:linear-gradient(160deg,#2a2f63,#1a1d44);color:#fff;border-radius:10px;font-size:20px;font-weight:700}.sdp button.dn{opacity:.3}
+.sdv .r{display:flex;gap:4px;margin-bottom:8px}.sdv i{width:34px;height:34px;display:grid;place-items:center;background:#1b2150;border-radius:6px;font-style:normal;font-weight:800}.sdv i.e{background:#5b6cf0}.sdv p{margin:0;font-size:13px;color:#c7cbf0}
+/* mastermind */
+.mmb{display:grid;gap:5px;padding:12px;border-radius:18px;background:linear-gradient(160deg,#2a1b4d,#140f2e);border:1px solid var(--line);box-shadow:0 18px 40px -16px #000}
+.mr{display:flex;align-items:center;gap:12px;padding:3px 8px;border-radius:12px;opacity:.75}.mr.on{opacity:1;background:rgba(255,255,255,.08);box-shadow:0 0 0 2px #fbbf24}.mr b{width:18px;color:var(--mute);font-size:13px}
+.ms{display:flex;gap:9px}.ms i{width:min(9vw,38px);aspect-ratio:1;border-radius:50%;background:rgba(0,0,0,.4);box-shadow:inset 0 3px 6px rgba(0,0,0,.6);border:2px solid #ffffff1a}.ms i.f{border-color:#fff6;box-shadow:inset 0 -5px 8px rgba(0,0,0,.35),inset 0 4px 6px rgba(255,255,255,.45),0 3px 6px rgba(0,0,0,.5)}
+.mf{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-left:8px}.mf u,.mmv .pg u{width:13px;height:13px;border-radius:50%;background:rgba(0,0,0,.4);display:block}.mf u.k,.pg u.k{background:#111;box-shadow:0 0 0 2px #fff}.mf u.w,.pg u.w{background:#fff}
+.mmp{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.mmp button{width:min(13vw,54px);aspect-ratio:1;border-radius:50%;border:3px solid #fff5;background:radial-gradient(circle at 35% 30%,#fff9,var(--c) 45%,#0006);box-shadow:0 6px 10px rgba(0,0,0,.5);transition:transform .12s}.mmp button:hover{transform:translateY(-4px) scale(1.08)}
+.mmv{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.mmv i{width:30px;height:30px;border-radius:50%;display:inline-block}.mmv .pg{display:grid;grid-template-columns:1fr 1fr;gap:3px}.mmv small{flex-basis:100%;color:var(--mute)}
+/* hanoi */
+.hnb{display:flex;gap:min(3vw,26px);width:min(96vw,640px);padding:18px 14px 8px;border-radius:20px;background:linear-gradient(180deg,#0f2a3a,#0b1a2a);border:1px solid var(--line);box-shadow:0 18px 40px -16px #000;position:relative}
+.hnb::after{content:"";position:absolute;left:0;right:0;bottom:36px;height:14px;background:linear-gradient(#a16207,#713f12);border-radius:8px}
+.hp{flex:1;height:min(300px,calc(100vh - 380px));min-height:210px;position:relative;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:50px;border-radius:12px}.hp.sel{background:rgba(251,191,36,.1);box-shadow:0 0 0 2px #fbbf24 inset}.hp:hover{background:rgba(255,255,255,.05)}
+.hp .pole{position:absolute;bottom:50px;top:10px;left:calc(50% - 6px);width:12px;border-radius:6px 6px 0 0;background:linear-gradient(90deg,#78350f,#d97706,#78350f)}
+.hp .stack{position:relative;display:flex;flex-direction:column-reverse;align-items:center;width:100%;z-index:2;gap:3px}.hp em{position:absolute;bottom:14px;font-style:normal;color:var(--mute);font-size:13px;z-index:3}
+.hp b{display:block;width:var(--w);height:min(26px,5vw);border-radius:999px;background:linear-gradient(180deg,hsl(var(--h) 85% 68%),hsl(var(--h) 75% 45%));box-shadow:0 3px 5px rgba(0,0,0,.5),inset 0 2px 3px rgba(255,255,255,.5);transition:transform .15s}.hp b.up{transform:translateY(-22px);box-shadow:0 12px 12px rgba(0,0,0,.4),0 0 14px #fde047}
+.hp.shk{animation:shake .3s}.hnv{display:flex;flex-direction:column;align-items:center;gap:4px}.hnv i{display:block;height:14px;border-radius:999px;background:linear-gradient(#fde68a,#d97706)}.hnv small{color:var(--mute);margin-top:6px}
 </style></head><body>
 <div class="bg"><i></i><i></i><i></i></div>
 <main id="hub">
   <header class="hero">
     <h1 class="logo">UDDGAM<span>GAME PLAZA</span></h1>
-    <p><b id="cnt">23</b> games · chess, snakes &amp; ladders, retro classics &amp; more · free for everyone</p>
+    <p><b id="cnt">29</b> games · chess, battleship, checkers, sudoku, snakes &amp; ladders, retro classics &amp; more · free for everyone</p>
     <div class="tools"><input id="q" type="search" placeholder="🔍  Search games…" autocomplete="off"><button id="rand" class="btn pri">🎲 Surprise me</button></div>
     <div id="chips"></div>
   </header>
@@ -1216,5 +1272,243 @@ start(root,X){
     steps:[['Roll the die','On your turn, press Roll. The number you roll is added to your TURN TOTAL.'],['Keep going or hold?','Roll again to build a bigger total — or press Hold to bank it safely into your score.'],['Beware the 1','Roll a 1 and your whole turn total is lost, and your turn ends. Oink!'],['Take turns','After you hold (or pig out) it’s the computer’s turn. Banked points are never lost.'],['Win','The first player to bank 100 points wins the game.']],
     tip:'A common strategy is to hold once your turn total reaches about 20 — beyond that, the risk of losing it all outweighs the extra points.'}));
   draw()}});
+/* ================= BATTLESHIP ================= */
+reg({id:'battleship',name:'Battleship',emoji:'🚢',cat:'Board',c1:'#0369a1',c2:'#1e3a8a',best:'low',unit:'Shots',desc:'Hide your fleet, hunt the enemy ships. Last fleet afloat wins.',how:'Shuffle your fleet, press Start, then tap the enemy waters to fire. Sink all 5 enemy ships first!',
+start(root,X){
+  root.style.maxWidth='1320px';
+  const N=10,FLEET=[['Carrier',5],['Battleship',4],['Cruiser',3],['Submarine',3],['Destroyer',2]];
+  let me,en,phase,turn,shots,aiQ,busy,over;
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const st=X.el('<div class="status bsst"></div>',sm),arena=X.el('<div class="bsarena"><div class="bsside"><h4>🎯 ENEMY WATERS</h4><div class="bsgrid en"></div><div class="bsfleet" id="ef"></div></div><div class="bsside"><h4>⚓ YOUR FLEET</h4><div class="bsgrid me"></div><div class="bsfleet" id="mf"></div></div></div>',sm),ctl=X.el('<div class="row"><button class="btn" id="bsh">🔀 Shuffle fleet</button><button class="btn pri" id="bgo">⚓ Start battle</button></div>',sm);
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🚢',title:'How to play Battleship',sub:'A naval hunt on a hidden 10×10 grid.',
+    vis:'<div class="bsvis"><span class="bv sh">▮▮▮▮</span><span class="bv hit">🔥</span><span class="bv miss">•</span><div><small>Ship · Hit · Miss</small></div></div>',
+    steps:[['Place your fleet','Both sides hide 5 ships: Carrier 5, Battleship 4, Cruiser 3, Submarine 3 and Destroyer 2. Press Shuffle until you like the layout.'],['Fire','Tap a square in ENEMY WATERS. 🔥 means a hit, a white ripple means a miss.'],['Take turns','You and the computer fire one shot each, back and forth.'],['Sink ships','A ship sinks when every square of it is hit. The fleet list shows which are still afloat.'],['Win','Sink all 5 enemy ships first. Your best score is the fewest shots you needed.']],
+    tip:'After a hit, shoot the squares next to it to find the ship’s direction. Early on, fire in a checkerboard pattern — every ship is long enough to be caught.'}));
+  const gE=$('.bsgrid.en',arena),gM=$('.bsgrid.me',arena);
+  for(const g of[gE,gM])for(let i=0;i<100;i++){const b=document.createElement('button');b.dataset.i=i;g.appendChild(b)}
+  function board(){const b={own:Array(100).fill(-1),pos:Array(100).fill(0),hor:Array(100).fill(true),shot:Array(100).fill(0),ships:[]};
+    FLEET.forEach(([nm,len],id)=>{for(;;){const h=Math.random()<.5,r=ri(0,h?9:9-len+1),c=ri(0,h?9-len+1:9),cs=[];for(let k=0;k<len;k++)cs.push(h?r*10+c+k:(r+k)*10+c);if(cs.some(x=>b.own[x]>=0))continue;cs.forEach((x,k)=>{b.own[x]=id;b.pos[x]=k;b.hor[x]=h});b.ships.push({nm,len,cells:cs,hits:0,id});break}});return b}
+  const sunk=(b,id)=>b.ships[id].hits>=b.ships[id].len;
+  function paint(b,g,showShips){[...g.children].forEach((d,i)=>{let cl='';const o=b.own[i],s=b.shot[i];
+    if(o>=0&&(showShips||(s===2&&sunk(b,o)))){const L=b.ships[o].len,p=b.pos[i];cl+=` sh ${b.hor[i]?'h':'v'} ${p===0?'s':p===L-1?'e':'m'}`}
+    if(s===1)cl+=' miss';if(s===2)cl+=sunk(b,o)?' hit snk':' hit';d.className=cl.trim();d.innerHTML=s===2?'<i>🔥</i>':s===1?'<i></i>':''});
+    const f=g===gE?$('#ef',arena):$('#mf',arena);f.innerHTML=b.ships.map(s=>`<span class="${sunk(b,s.id)?'dead':''}">${s.nm}<em>${'■'.repeat(s.len-s.hits)}${'□'.repeat(s.hits)}</em></span>`).join('')}
+  const draw=()=>{paint(en,gE,false);paint(me,gM,true);arena.classList.toggle('setup',phase==='setup');ctl.style.display=phase==='setup'?'':'none'};
+  function fire(b,i,byMe){b.shot[i]=1;let r='miss';
+    if(b.own[i]>=0){b.shot[i]=2;const s=b.ships[b.own[i]];s.hits++;r=sunk(b,s.id)?'sunk':'hit'}
+    if(r==='miss'){X.noise(.25,.4,1200);X.beep(500,.2,'sine',.14,-300)}
+    else if(r==='hit'){X.noise(.35,.7,500);X.beep(110,.3,'sawtooth',.2,-50)}
+    else{X.noise(.7,.8,400);X.beep(80,.7,'sawtooth',.25,-40);X.after(()=>X.seq([392,330,262],.15,'square',.12),250)}
+    return r}
+  const alive=b=>b.ships.some(s=>!sunk(b,s.id));
+  function end(win){over=true;phase='done';draw();if(win){const rec=X.score(shots);X.confetti();X.seq([523,659,784,1047],.12,'triangle',.25);st.textContent='🏆 Victory! You sank the enemy fleet!';X.after(()=>X.over('Victory!',`You needed ${shots} shots${rec?' — new best! 🏆':''}`,'🚢'),1400)}
+    else{paint(en,gE,true);X.seq([392,330,262,196],.2,'sawtooth',.2);st.textContent='💥 Your fleet was sunk…';X.after(()=>X.over('Defeat',`You hit ${en.ships.reduce((a,s)=>a+s.hits,0)} enemy squares`,'⚓'),1600)}}
+  async function aiTurn(){busy=true;st.textContent='🤖 Enemy is aiming…';await X.sleep(750);if(over)return;
+    let i;while(aiQ.length){const c=aiQ.pop();if(!me.shot[c]){i=c;break}}
+    if(i==null){const fr=[...Array(100).keys()].filter(k=>!me.shot[k]),par=fr.filter(k=>((k%10)+(k/10|0))%2===0);i=pick(par.length?par:fr)}
+    const r=fire(me,i,false);
+    if(r==='hit'||r==='sunk'){const x=i%10,y=i/10|0;[[1,0],[-1,0],[0,1],[0,-1]].forEach(([dx,dy])=>{const nx=x+dx,ny=y+dy;if(nx>=0&&nx<10&&ny>=0&&ny<10&&!me.shot[ny*10+nx])aiQ.push(ny*10+nx)})}
+    if(r==='sunk'){aiQ=[];me.ships.forEach(s=>{if(!sunk(me,s.id))s.cells.forEach(c=>{if(me.shot[c]===2){const x=c%10,y=c/10|0;[[1,0],[-1,0],[0,1],[0,-1]].forEach(([dx,dy])=>{const nx=x+dx,ny=y+dy;if(nx>=0&&nx<10&&ny>=0&&ny<10&&!me.shot[ny*10+nx])aiQ.push(ny*10+nx)})}})})}
+    draw();st.textContent=r==='miss'?'Enemy missed — your turn!':r==='hit'?'💥 Enemy hit one of your ships!':`💀 Enemy sunk your ${me.ships[me.own[i]].nm}!`;
+    if(!alive(me))return end(false);busy=false}
+  gE.onclick=e=>{const q=e.target.closest('button');if(!q||phase!=='war'||busy||over)return;const i=+q.dataset.i;if(en.shot[i])return;shots++;X.info('Shots '+shots);
+    const r=fire(en,i,true);draw();st.textContent=r==='miss'?'💦 Splash — a miss. Enemy turn…':r==='hit'?'🔥 HIT! Enemy turn…':`💀 You sunk the ${en.ships[en.own[i]].nm}!`;
+    if(!alive(en))return end(true);busy=true;X.after(aiTurn,500)};
+  $('#bsh',ctl).onclick=()=>{me=board();X.beep(400,.08,'triangle',.15);draw()};
+  $('#bgo',ctl).onclick=()=>{phase='war';busy=false;X.seq([392,523,659],.1,'square',.15);st.textContent='🎯 Battle stations! Fire at the enemy waters.';draw()};
+  me=board();en=board();phase='setup';shots=0;aiQ=[];busy=false;over=false;st.textContent='Arrange your fleet, then press Start battle.';X.info('Shots 0');draw()}});
+
+/* ================= CHECKERS ================= */
+reg({id:'checkers',name:'Checkers',emoji:'🔴',cat:'Board',c1:'#b91c1c',c2:'#1f2937',desc:'Jump, capture and crown your kings. The classic board duel.',how:'Tap a piece, then a highlighted square. Captures are mandatory. Wipe out or block all enemy pieces!',
+start(root,X){
+  root.style.maxWidth='1240px';
+  let mode='ai',lvl='med',B,turn,sel,last,over,busy,noCap;
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const sg=X.el('<div class="row wrap"></div>',sm);
+  sg.appendChild(X.seg([['ai','vs Computer'],['2p','2 Players']],mode,k=>{mode=k;fresh()}));const lv=X.seg([['easy','Easy'],['med','Medium'],['hard','Hard']],lvl,k=>lvl=k);lv.classList.add('small');sg.appendChild(lv);
+  const tr1=X.el('<div class="cktray" id="t1"></div>',sm),st=X.el('<div class="status"></div>',sm),bd=X.el('<div class="ckb"></div>',sm),tr2=X.el('<div class="cktray" id="t2"></div>',sm);
+  sm.appendChild(X.el('<div class="row"><button class="btn pri" id="ckn">New game</button></div>',sm));
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🔴',title:'How to play Checkers',sub:'Red moves first, up the board.',
+    vis:'<div class="ckvis"><span class="pcs r"></span><b>→</b><span class="pcs r"></span><i>move 1 square diagonally</i><br><span class="pcs r"></span><span class="pcs b"></span><b>→ jump →</b><span class="pcs r"></span><i>capture!</i><br><span class="pcs r k">♛</span><i>king: moves both ways</i></div>',
+    steps:[['Move','Pieces move one square diagonally forward onto an empty dark square.'],['Capture','Jump over an enemy piece into the empty square behind it to remove it. Keep jumping if you can — multi-jumps happen in one turn.'],['Mandatory','If you can capture, you MUST capture. Highlighted pieces show which ones can.'],['Crown','Reach the far row to become a king ♛, which moves and jumps both forward and backward.'],['Win','Capture every enemy piece or leave them with no legal move.']],
+    tip:'Keep your back row home as long as you can to stop enemy kings, and trade pieces when you are ahead.'}));
+  const rc=p=>[p>>3,p&7],ix=(r,c)=>r*8+c,inb=(r,c)=>r>=0&&r<8&&c>=0&&c<8,sg1=v=>v>0?1:v<0?-1:0;
+  const start=()=>{const b=Array(64).fill(0);for(let r=0;r<8;r++)for(let c=0;c<8;c++)if((r+c)%2){if(r<3)b[ix(r,c)]=-1;else if(r>4)b[ix(r,c)]=1}return b};
+  function jumps(b,p,side,path,caps,out,king){const[r,c]=rc(p);const dirs=king?[[-1,-1],[-1,1],[1,-1],[1,1]]:side===1?[[-1,-1],[-1,1]]:[[1,-1],[1,1]];let any=false;
+    for(const[dr,dc]of dirs){const mr=r+dr,mc=c+dc,lr=r+2*dr,lc=c+2*dc;if(!inb(lr,lc))continue;const m=ix(mr,mc),l=ix(lr,lc);
+      if(sg1(b[m])===-side&&!caps.includes(m)&&b[l]===0){any=true;const nk=king||(side===1?lr===0:lr===7);const np=[...path,l],nc=[...caps,m];
+        if(nk&&!king)out.push({path:np,caps:nc,from:path[0]});else jumps(b,l,side,np,nc,out,nk)}}
+    if(!any&&caps.length)out.push({path,caps,from:path[0]})}
+  function gen(b,side){const caps=[],simple=[];
+    for(let p=0;p<64;p++){const v=b[p];if(sg1(v)!==side)continue;const king=Math.abs(v)===2;
+      const bb=b.slice();bb[p]=0;const out=[];jumps(bb,p,side,[p],[],out,king);out.forEach(m=>caps.push(m));
+      const[r,c]=rc(p),dirs=king?[[-1,-1],[-1,1],[1,-1],[1,1]]:side===1?[[-1,-1],[-1,1]]:[[1,-1],[1,1]];
+      for(const[dr,dc]of dirs){const nr=r+dr,nc=c+dc;if(inb(nr,nc)&&b[ix(nr,nc)]===0)simple.push({path:[p,ix(nr,nc)],caps:[],from:p})}}
+    return caps.length?caps:simple}
+  function app(b,m){const n=b.slice(),to=m.path[m.path.length-1];let v=n[m.from];n[m.from]=0;m.caps.forEach(c=>n[c]=0);const[r]=rc(to);if(v===1&&r===0)v=2;if(v===-1&&r===7)v=-2;n[to]=v;return n}
+  function ev(b){let s=0;for(let p=0;p<64;p++){const v=b[p];if(!v)continue;const[r,c]=rc(p),a=Math.abs(v),sd=sg1(v);let x=a===2?170:100;if(a===1)x+=(sd===1?7-r:r)*4;if(c===0||c===7)x+=3;if(a===1&&((sd===1&&r===7)||(sd===-1&&r===0)))x+=6;s+=sd*x}return s}
+  function ab(b,side,d,al,be){const ms=gen(b,side);if(!ms.length)return side===-1?9999+d:-9999-d;if(d===0)return ev(b);
+    if(side===1){let v=-1e9;for(const m of ms){v=Math.max(v,ab(app(b,m),-1,d-1,al,be));al=Math.max(al,v);if(al>=be)break}return v}
+    let v=1e9;for(const m of ms){v=Math.min(v,ab(app(b,m),1,d-1,al,be));be=Math.min(be,v);if(al>=be)break}return v}
+  function aiMove(){const ms=gen(B,-1),d=lvl==='easy'?1:lvl==='med'?3:6;if(lvl==='easy'&&Math.random()<.35)return pick(ms);let best=1e9,bm=[];
+    for(const m of ms){const v=ab(app(B,m),1,d,-1e9,1e9)+(lvl==='easy'?rnd(-30,30):Math.random()*2);if(v<best-1e-9){best=v;bm=[m]}else if(Math.abs(v-best)<1e-9)bm.push(m)}return pick(bm)}
+  const who=s=>mode==='ai'?(s===1?'You':'Computer'):(s===1?'Red':'Black');
+  function cnt(s){let n=0,k=0;B.forEach(v=>{if(sg1(v)===s){n++;if(Math.abs(v)===2)k++}});return[n,k]}
+  function tray(){const[b,bk]=cnt(-1),[r,rk]=cnt(1);$('#t1').innerHTML=`⚫ ${who(-1)} <b>${b}</b> pieces${bk?` · ${bk} 👑`:''} <em>captured: ${12-r}</em>`;$('#t2').innerHTML=`🔴 ${who(1)} <b>${r}</b> pieces${rk?` · ${rk} 👑`:''} <em>captured: ${12-b}</em>`}
+  function render(){const ms=over?[]:gen(B,turn),forced=ms.length&&ms[0].caps.length,movable=new Set(ms.map(m=>m.from)),tg=sel!=null?ms.filter(m=>m.from===sel).map(m=>m.path[m.path.length-1]):[];
+    [...bd.children].forEach((d,p)=>{const v=B[p];let cl=((rc(p)[0]+rc(p)[1])%2?'dk':'lt');if(sel===p)cl+=' sel';if(last&&(last.includes(p)))cl+=' lm';if(tg.includes(p))cl+=' tg';
+      d.className=cl;d.innerHTML=v?`<span class="pcs ${v>0?'r':'b'}${Math.abs(v)===2?' k':''}${!over&&sg1(v)===turn&&forced&&movable.has(p)?' must':''}">${Math.abs(v)===2?'♛':''}</span>`:''});tray()}
+  function fin(){const ms=gen(B,turn);if(ms.length)return false;over=true;const w=-turn;st.textContent=`${who(w)} win${mode==='ai'&&w===1?'':'s'}! 🎉  No moves left for ${who(turn)}.`;render();
+    if(w===1||mode==='2p'){X.confetti();X.seq([523,659,784,1047],.12,'triangle',.25)}else X.seq([392,330,262],.2,'sawtooth',.2);X.after(()=>X.over(`${who(w)} win${mode==='ai'&&w===1?'':'s'}!`,'Great game!','🔴'),1300);return true}
+  function stat(){const ms=gen(B,turn);st.textContent=(mode==='ai'&&turn===-1)?'Computer is thinking…':`${who(turn)} to move${ms[0]&&ms[0].caps.length?' — capture is mandatory!':''}`}
+  async function doMove(m){busy=true;const was=B[m.from];B=app(B,m);last=[m.from,...m.path.slice(1)];sel=null;noCap=m.caps.length||Math.abs(was)===1?0:noCap+1;
+    if(m.caps.length){X.noise(.15,.6,1100,'bandpass');X.beep(180,.15,'square',.2,-80);if(m.caps.length>1)X.after(()=>X.seq([660,880,1100],.07,'square',.12),120)}else{X.noise(.05,.5,1500,'bandpass');X.beep(200,.07,'sine',.28)}
+    if(Math.abs(B[m.path[m.path.length-1]])===2&&Math.abs(was)===1)X.after(()=>X.seq([784,1047,1319],.08,'triangle',.18),200);
+    turn=-turn;render();if(fin()){busy=false;return}if(noCap>=80){over=true;st.textContent='Draw — no progress 🤝';X.after(()=>X.over('Draw','80 moves without a capture','🤝'),900);return}
+    stat();if(mode==='ai'&&turn===-1){await X.sleep(600);if(over)return;await doMove(aiMove())}busy=false}
+  bd.onclick=e=>{const q=e.target.closest('[data-i]');if(!q||over||busy||(mode==='ai'&&turn===-1))return;const p=+q.dataset.i,ms=gen(B,turn);
+    const mv=sel!=null&&ms.find(m=>m.from===sel&&m.path[m.path.length-1]===p);if(mv)return doMove(mv);
+    if(sg1(B[p])===turn&&ms.some(m=>m.from===p)){sel=p;X.beep(700,.04,'sine',.2);render()}else{if(sg1(B[p])===turn){X.beep(150,.1,'square',.15);st.textContent=ms[0]&&ms[0].caps.length?'You must capture — pick a glowing piece!':'That piece has no moves.'}}};
+  for(let i=0;i<64;i++){const d=document.createElement('div');d.dataset.i=i;bd.appendChild(d)}
+  function fresh(){B=start();turn=1;sel=null;last=null;over=false;busy=false;noCap=0;X.seq([392,523],.1,'triangle',.15);render();stat()}
+  $('#ckn',sm).onclick=fresh;fresh()}});
+/* ================= WORD GUESS ================= */
+reg({id:'wordguess',name:'Word Guess',emoji:'🔤',cat:'Puzzle',c1:'#16a34a',c2:'#ca8a04',best:'high',unit:'Streak',desc:'Guess the secret 5-letter word in six tries.',how:'Type a 5-letter word and press Enter. 🟩 right spot · 🟨 wrong spot · ⬛ not in the word.',
+start(root,X){
+  const W='ABOUT ABOVE ACTOR ADMIT ADOPT ADULT AFTER AGAIN AGENT AGREE AHEAD ALARM ALBUM ALERT ALIKE ALIVE ALLOW ALONE ALONG ALTER AMONG ANGEL ANGER ANGLE ANGRY APART APPLE APPLY ARENA ARGUE ARISE ARMOR ARRAY ASIDE ASSET AUDIO AVOID AWAKE AWARD AWARE BADLY BAKER BASIC BEACH BEGAN BEGIN BEING BELOW BENCH BIRTH BLACK BLADE BLAME BLANK BLAST BLAZE BLEND BLESS BLIND BLOCK BLOOD BLOOM BOARD BOAST BONUS BOOST BOOTH BRAIN BRAND BRAVE BREAD BREAK BRICK BRIDE BRIEF BRING BROAD BROWN BRUSH BUILD BUNCH BURST CABIN CABLE CANDY CARRY CATCH CAUSE CHAIN CHAIR CHALK CHARM CHART CHASE CHEAP CHECK CHEEK CHEER CHESS CHEST CHIEF CHILD CHILL CHINA CHOIR CIVIL CLAIM CLASS CLEAN CLEAR CLERK CLICK CLIMB CLOCK CLOSE CLOTH CLOUD CLOWN COACH COAST COUCH COUNT COURT COVER CRAFT CRANE CRASH CRAZY CREAM CRIME CROSS CROWD CROWN CRUSH CURVE CYCLE DAILY DANCE DEALT DEATH DEBUT DELAY DEPTH DOING DOUBT DOZEN DRAFT DRAIN DRAMA DRANK DRAWN DREAM DRESS DRIED DRINK DRIVE EAGLE EARLY EARTH EIGHT ELITE EMPTY ENEMY ENJOY ENTER ENTRY EQUAL ERROR EVENT EVERY EXACT EXIST EXTRA FAINT FAIRY FAITH FALSE FANCY FAULT FEAST FENCE FIELD FIFTH FIFTY FIGHT FINAL FIRST FLAME FLASH FLEET FLOOR FLOUR FLUID FOCUS FORCE FORTH FORTY FOUND FRAME FRESH FRONT FRUIT FUNNY GIANT GIVEN GLASS GLOBE GLORY GRACE GRADE GRAIN GRAND GRANT GRAPE GRASS GREAT GREEN GREET GRILL GROUP GUARD GUESS GUEST GUIDE HAPPY HARSH HEART HEAVY HENCE HONEY HORSE HOTEL HOUSE HUMAN HUMOR HURRY IDEAL IMAGE INDEX INNER INPUT IRONY ISSUE IVORY JELLY JEWEL JOINT JUICE KNIFE KNOCK LABEL LARGE LASER LATER LAUGH LAYER LEARN LEASE LEAST LEAVE LEGAL LEMON LEVEL LIGHT LIMIT LINEN LOCAL LOGIC LOOSE LUCKY LUNCH MAGIC MAJOR MAKER MANGO MARCH MATCH MAYBE MAYOR MEDAL MERCY MERIT METAL METER MIGHT MINOR MODEL MONEY MONTH MORAL MOTOR MOUNT MOUSE MOUTH MOVIE MUSIC NAIVE NERVE NEVER NIGHT NOBLE NOISE NORTH NOTED NOVEL NURSE OCEAN OFFER OFTEN OLIVE ONION OPERA ORBIT ORDER OTHER OUTER OWNER PAINT PANEL PAPER PARTY PASTA PATCH PAUSE PEACE PEARL PHASE PHONE PHOTO PIANO PILOT PITCH PIZZA PLACE PLAIN PLANE PLANT PLATE PLAZA POINT POUND POWER PRESS PRICE PRIDE PRIME PRINT PRIZE PROOF PROUD QUEEN QUEST QUICK QUIET QUOTE RADIO RAISE RALLY RANCH RANGE RAPID RATIO REACH READY REALM REBEL REFER RELAX REPLY RIDER RIDGE RIGHT RIVER ROBOT ROCKY ROUGH ROUND ROUTE ROYAL RULER RURAL SAINT SALAD SCALE SCENE SCOPE SCORE SENSE SERVE SEVEN SHADE SHAKE SHAPE SHARE SHARP SHEEP SHEET SHELF SHELL SHIFT SHINE SHIRT SHOCK SHOOT SHORT SHOWN SIGHT SILLY SINCE SKILL SLEEP SLICE SLIDE SMALL SMART SMILE SMOKE SNAKE SOLAR SOLID SOLVE SORRY SOUND SOUTH SPACE SPARE SPARK SPEAK SPEED SPELL SPEND SPICE SPOON SPORT SQUAD STACK STAFF STAGE STAIR STAKE STAND STARE START STATE STEAM STEEL STICK STILL STOCK STONE STOOD STORE STORM STORY STRIP STUDY STUFF STYLE SUGAR SUITE SUNNY SUPER SWEET SWIFT SWING SWORD TABLE TASTE TEACH TEETH THANK THEME THICK THING THINK THIRD THREE THROW THUMB TIGER TIGHT TIMER TIRED TITLE TOAST TODAY TOOTH TOPIC TORCH TOTAL TOUCH TOUGH TOWEL TOWER TRACK TRADE TRAIL TRAIN TREAT TREND TRIAL TRIBE TRICK TRUCK TRULY TRUNK TRUST TRUTH TWICE UNCLE UNDER UNION UNITY UNTIL UPPER UPSET URBAN USAGE USUAL VALID VALUE VIDEO VIRUS VISIT VITAL VOCAL VOICE WAGON WASTE WATCH WATER WEARY WEIRD WHALE WHEAT WHEEL WHERE WHICH WHILE WHITE WHOLE WHOSE WOMAN WORLD WORRY WORSE WORTH WOULD WOUND WRIST WRITE WRONG YACHT YOUNG YOUTH ZEBRA'.split(' ');
+  let ans,row,col,grid,over,busy,streak=0;const ST={};
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const st=X.el('<div class="status"></div>',sm),bd=X.el('<div class="wgb"></div>',sm),kb=X.el('<div class="wgk"></div>',sm);
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🔤',title:'How to play Word Guess',sub:'Find the hidden 5-letter word in 6 tries.',
+    vis:'<div class="wgvis"><span class="g">C</span><span class="y">R</span><span class="n">A</span><span class="n">N</span><span class="y">E</span><div><small>🟩 correct · 🟨 wrong spot · ⬛ absent</small></div></div>',
+    steps:[['Type a word','Use your keyboard or the on-screen keys, then press Enter. Any 5-letter combination is accepted.'],['Read the colours','🟩 = right letter, right spot. 🟨 = letter is in the word but elsewhere. Dark = not in the word.'],['Narrow it down','Use each clue for your next guess. The keyboard remembers the colours for you.'],['Win','Solve it within 6 guesses. Chain wins to build a streak — your best streak is saved!']],
+    tip:'Start with a word full of common letters like CRANE or STORE, then avoid reusing letters that came back dark.'}));
+  for(let r=0;r<6;r++){const d=document.createElement('div');d.className='wr';for(let c=0;c<5;c++)d.appendChild(document.createElement('i'));bd.appendChild(d)}
+  ['QWERTYUIOP','ASDFGHJKL','⏎ZXCVBNM⌫'].forEach(rw=>{const d=document.createElement('div');[...rw].forEach(k=>{const b=document.createElement('button');b.textContent=k;b.dataset.k=k;if(k==='⏎'||k==='⌫')b.className='wide';d.appendChild(b)});kb.appendChild(d)});
+  function paint(){[...bd.children].forEach((d,r)=>[...d.children].forEach((t,c)=>{t.textContent=grid[r][c]||'';t.classList.toggle('f',!!grid[r][c])}))}
+  function key(k){if(over||busy)return;X.beep(600,.03,'sine',.15);
+    if(k==='⌫'){if(col>0)grid[row][--col]='';paint();return}
+    if(k==='⏎'){if(col<5){shake();st.textContent='Not enough letters';X.beep(160,.12,'square',.15);return}return submit()}
+    if(col<5&&/^[A-Z]$/.test(k)){grid[row][col++]=k;paint();const t=bd.children[row].children[col-1];t.classList.add('pop')}}
+  function shake(){const d=bd.children[row];d.classList.remove('shk');void d.offsetWidth;d.classList.add('shk')}
+  async function submit(){busy=true;const g=grid[row].join(''),res=Array(5).fill('n'),left=[...ans];
+    for(let i=0;i<5;i++)if(g[i]===ans[i]){res[i]='g';left[i]=null}
+    for(let i=0;i<5;i++)if(res[i]!=='g'){const j=left.indexOf(g[i]);if(j>=0){res[i]='y';left[j]=null}}
+    const d=bd.children[row];for(let i=0;i<5;i++){await X.sleep(260);d.children[i].classList.add('rv',res[i]);X.beep(res[i]==='g'?880:res[i]==='y'?660:330,.12,'triangle',.2)}
+    for(let i=0;i<5;i++){const p=ST[g[i]]||'',r=res[i];if(r==='g'||(r==='y'&&p!=='g')||(r==='n'&&!p))ST[g[i]]=r}
+    $$('button',kb).forEach(b=>{if(ST[b.dataset.k])b.className=ST[b.dataset.k]});
+    await X.sleep(300);
+    if(g===ans){over=true;streak++;X.score(streak);X.info('Streak '+streak);d.classList.add('win');X.confetti();X.seq([523,659,784,1047],.1,'triangle',.25);st.textContent=['Genius!','Magnificent!','Impressive!','Splendid!','Great!','Phew!'][row];X.after(next,2200);return}
+    row++;col=0;if(row>=6){over=true;const rec=X.score(streak);X.seq([330,262,196],.2,'sawtooth',.2);st.textContent=`The word was ${ans}`;X.after(()=>{X.over('Out of tries',`The word was ${ans}. Streak: ${streak}${rec?' — new best! 🏆':''}`,'🔤');streak=0},1500);return}
+    st.textContent=`Guess ${row+1} of 6`;busy=false}
+  function next(){ans=pick(W);row=0;col=0;grid=Array.from({length:6},()=>Array(5).fill(''));over=false;busy=false;for(const k in ST)delete ST[k];$$('.wr i',bd).forEach(t=>t.className='');$$('button',kb).forEach(b=>b.className=b.classList.contains('wide')?'wide':'');paint();st.textContent='Guess 1 of 6';X.info('Streak '+streak)}
+  kb.onclick=e=>{const b=e.target.closest('button');if(b)key(b.dataset.k)};
+  X.on(window,'keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(e.key==='Enter')key('⏎');else if(e.key==='Backspace')key('⌫');else if(/^[a-z]$/i.test(e.key))key(e.key.toUpperCase())});
+  next()}});
+
+/* ================= SUDOKU ================= */
+reg({id:'sudoku',name:'Sudoku',emoji:'🧮',cat:'Puzzle',c1:'#2563eb',c2:'#7c3aed',best:'low',unit:'Seconds',desc:'Fill the grid so every row, column and box holds 1–9.',how:'Tap a cell, then a number. No repeats in any row, column or 3×3 box.',
+start(root,X){
+  root.style.maxWidth='1100px';
+  let lvl='easy',sol,giv,val,notes,sel,pen,t0,over,tm;
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const sg=X.seg([['easy','Easy'],['med','Medium'],['hard','Hard']],lvl,k=>{lvl=k;fresh()});sm.appendChild(sg);
+  const st=X.el('<div class="status"></div>',sm),bd=X.el('<div class="sdk"></div>',sm),np=X.el('<div class="sdp"></div>',sm),ac=X.el('<div class="row"><button class="btn" id="sn">✏️ Notes: off</button><button class="btn" id="sh">💡 Hint</button><button class="btn" id="se">⌫ Erase</button><button class="btn pri" id="sg">New puzzle</button></div>',sm);
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🧮',title:'How to play Sudoku',sub:'Logic only — no guessing needed.',
+    vis:'<div class="sdv"><div class="r"><i>5</i><i>3</i><i class="e"></i><i>7</i></div><p>Every <b>row</b>, <b>column</b> and <b>3×3 box</b> must contain the digits 1–9 exactly once.</p></div>',
+    steps:[['Pick a cell','Tap an empty square. Its row, column and box light up, and matching numbers glow.'],['Enter a number','Tap 1–9 below (or type on your keyboard). Duplicates turn red.'],['Use notes','Turn Notes on to jot small candidate numbers while you think.'],['Stuck?','💡 Hint fills the selected cell with the right number (adds 30 s to your time).'],['Finish','Fill every cell correctly. Your best time per level is saved.']],
+    tip:'Scan for a number that already appears in 2 boxes of a row — it can only go in one place in the third box.'}));
+  const bit=n=>1<<n;
+  function solveCount(g,lim){let cnt=0;const rows=Array(9).fill(0),cols=Array(9).fill(0),bx=Array(9).fill(0);
+    for(let i=0;i<81;i++)if(g[i]){const r=i/9|0,c=i%9,b=bit(g[i]);rows[r]|=b;cols[c]|=b;bx[(r/3|0)*3+(c/3|0)]|=b}
+    (function go(){if(cnt>=lim)return;let bi=-1,bm=0,bc=10;for(let i=0;i<81;i++)if(!g[i]){const r=i/9|0,c=i%9,m=~(rows[r]|cols[c]|bx[(r/3|0)*3+(c/3|0)])&0x3fe;let k=0;for(let v=m;v;v&=v-1)k++;if(k<bc){bc=k;bi=i;bm=m;if(k<=1)break}}
+      if(bi<0){cnt++;return}if(!bc)return;const r=bi/9|0,c=bi%9,b=(r/3|0)*3+(c/3|0);
+      for(let n=1;n<=9;n++)if(bm&bit(n)){g[bi]=n;rows[r]|=bit(n);cols[c]|=bit(n);bx[b]|=bit(n);go();g[bi]=0;rows[r]&=~bit(n);cols[c]&=~bit(n);bx[b]&=~bit(n);if(cnt>=lim)return}})();return cnt}
+  function fill(){const g=Array(81).fill(0);(function go(i){if(i===81)return true;const r=i/9|0,c=i%9,ns=[1,2,3,4,5,6,7,8,9].sort(()=>Math.random()-.5);
+      for(const n of ns){let ok=true;for(let k=0;k<9&&ok;k++){if(g[r*9+k]===n||g[k*9+c]===n)ok=false}const br=(r/3|0)*3,bc=(c/3|0)*3;for(let a=0;a<3&&ok;a++)for(let b=0;b<3;b++)if(g[(br+a)*9+bc+b]===n)ok=false;
+        if(ok){g[i]=n;if(go(i+1))return true;g[i]=0}}return false})(0);return g}
+  function gen(){const full=fill(),p=full.slice(),target={easy:40,med:33,hard:28}[lvl];let clues=81;const order=[...Array(81).keys()].sort(()=>Math.random()-.5);
+    for(const i of order){if(clues<=target)break;const v=p[i];p[i]=0;if(solveCount(p.slice(),2)!==1)p[i]=v;else clues--}return{full,p}}
+  for(let i=0;i<81;i++){const d=document.createElement('button');d.dataset.i=i;bd.appendChild(d)}
+  for(let n=1;n<=9;n++){const b=document.createElement('button');b.textContent=n;b.dataset.n=n;np.appendChild(b)}
+  const peers=(a,b)=>{const ra=a/9|0,ca=a%9,rb=b/9|0,cb=b%9;return ra===rb||ca===cb||((ra/3|0)===(rb/3|0)&&(ca/3|0)===(cb/3|0))};
+  const bad=i=>{const v=val[i];if(!v)return false;for(let k=0;k<81;k++)if(k!==i&&val[k]===v&&peers(i,k))return true;return false};
+  function render(){const sv=sel!=null?val[sel]:0;[...bd.children].forEach((d,i)=>{let cl='';if(giv[i])cl+=' gv';if(i===sel)cl+=' sel';else if(sel!=null&&peers(sel,i))cl+=' pr';if(sv&&val[i]===sv&&i!==sel)cl+=' sm';if(bad(i))cl+=' bd';if(i%9===2||i%9===5)cl+=' rb';if((i/9|0)===2||(i/9|0)===5)cl+=' bb';d.className=cl.trim();
+      d.innerHTML=val[i]?val[i]:(notes[i].size?`<u>${[1,2,3,4,5,6,7,8,9].map(n=>`<s>${notes[i].has(n)?n:''}</s>`).join('')}</u>`:'')});
+    const done=Array(10).fill(0);val.forEach(v=>done[v]++);$$('button',np).forEach(b=>b.classList.toggle('dn',done[+b.dataset.n]>=9))}
+  function put(n){if(over||sel==null||giv[sel])return;
+    if(pen){if(val[sel])return;notes[sel].has(n)?notes[sel].delete(n):notes[sel].add(n);X.beep(500,.03,'sine',.15);render();return}
+    val[sel]=n;notes[sel].clear();X.beep(bad(sel)?160:660,.07,bad(sel)?'square':'triangle',.2);
+    for(let i=0;i<81;i++)if(i!==sel&&peers(sel,i))notes[i].delete(n);render();check()}
+  function check(){if(val.some((v,i)=>v!==sol[i]))return;over=true;clearInterval(tm);const s=Math.round((performance.now()-t0)/1000),rec=X.score(s,lvl);X.confetti();X.seq([523,659,784,1047,1319],.1,'triangle',.25);st.textContent='🎉 Solved in '+fmt(s);X.after(()=>X.over('Solved!',`Time ${fmt(s)}${rec?' — new best! 🏆':''}`,'🧮'),1200)}
+  const fmt=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+  bd.onclick=e=>{const q=e.target.closest('button');if(!q)return;sel=+q.dataset.i;X.beep(420,.03,'sine',.12);render()};
+  np.onclick=e=>{const q=e.target.closest('button');if(q)put(+q.dataset.n)};
+  $('#sn',ac).onclick=e=>{pen=!pen;e.target.textContent='✏️ Notes: '+(pen?'ON':'off');e.target.classList.toggle('pri',pen)};
+  $('#se',ac).onclick=()=>{if(sel!=null&&!giv[sel]&&!over){val[sel]=0;notes[sel].clear();render()}};
+  $('#sh',ac).onclick=()=>{if(over)return;let i=sel;if(i==null||giv[i]||val[i]===sol[i]){const c=[...Array(81).keys()].filter(k=>!giv[k]&&val[k]!==sol[k]);if(!c.length)return;i=pick(c);sel=i}val[i]=sol[i];notes[i].clear();t0-=30000;X.seq([880,1175],.08,'triangle',.2);render();check()};
+  X.on(window,'keydown',e=>{if(e.key>='1'&&e.key<='9')put(+e.key);else if(e.key==='Backspace'||e.key==='Delete'||e.key==='0')$('#se',ac).click();else if(sel!=null){const m={ArrowUp:-9,ArrowDown:9,ArrowLeft:-1,ArrowRight:1}[e.key];if(m){const n=sel+m;if(n>=0&&n<81&&!(m===1&&sel%9===8)&&!(m===-1&&sel%9===0)){sel=n;render()}}}});
+  function fresh(){clearInterval(tm);st.textContent='Generating…';const{full,p}=gen();sol=full;giv=p.map(v=>!!v);val=p.slice();notes=Array.from({length:81},()=>new Set());sel=null;over=false;pen=false;$('#sn',ac).textContent='✏️ Notes: off';$('#sn',ac).classList.remove('pri');t0=performance.now();render();st.textContent='Fill every row, column and box with 1–9';
+    tm=X.every(()=>{if(!over)X.info('⏱ '+fmt(Math.round((performance.now()-t0)/1000)))},500)}
+  $('#sg',ac).onclick=fresh;fresh()}});
+
+/* ================= CODE BREAKER (MASTERMIND) ================= */
+reg({id:'mastermind',name:'Code Breaker',emoji:'🎯',cat:'Puzzle',c1:'#9333ea',c2:'#f97316',best:'low',unit:'Guesses',desc:'Crack the secret colour code using the clues.',how:'Pick 4 colours and press Check. ⚫ = right colour & place, ⚪ = right colour, wrong place.',
+start(root,X){
+  root.style.maxWidth='1100px';
+  const COL=['#ef4444','#f59e0b','#22c55e','#3b82f6','#a855f7','#ec4899'],NM=['Red','Amber','Green','Blue','Purple','Pink'],MAXR=10;let code,rows,cur,over;
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const st=X.el('<div class="status"></div>',sm),bd=X.el('<div class="mmb"></div>',sm),pal=X.el('<div class="mmp"></div>',sm),ac=X.el('<div class="row"><button class="btn" id="mu">⌫ Undo</button><button class="btn pri" id="mk">✔ Check</button><button class="btn" id="mn">New code</button></div>',sm);
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🎯',title:'How to play Code Breaker',sub:'Think like a codebreaker. 10 tries to find the code.',
+    vis:'<div class="mmv"><i style="background:#ef4444"></i><i style="background:#3b82f6"></i><i style="background:#22c55e"></i><i style="background:#f59e0b"></i><b>→</b><span class="pg"><u class="k"></u><u class="w"></u><u></u><u></u></span><small>⚫ colour + place correct · ⚪ colour right, place wrong</small></div>',
+    steps:[['Secret code','The computer hides 4 colours (from 6). Colours may repeat.'],['Make a guess','Tap colours below to fill the row, then press Check.'],['Read the pegs','⚫ black = right colour in the right spot. ⚪ white = right colour in the wrong spot. No peg = colour not used.'],['Deduce','Use the pegs to narrow it down. Crack the code before the 10 rows run out!']],
+    tip:'Open with two different pairs (like 🔴🔴🔵🔵) to quickly learn which colours are in the code.'}));
+  for(let r=0;r<MAXR;r++){const d=X.el(`<div class="mr"><b>${r+1}</b><div class="ms">${'<i></i>'.repeat(4)}</div><div class="mf">${'<u></u>'.repeat(4)}</div></div>`,bd)}
+  COL.forEach((c,i)=>{const b=document.createElement('button');b.style.setProperty('--c',c);b.title=NM[i];b.dataset.c=i;pal.appendChild(b)});
+  function paint(){$$('.mr',bd).forEach((d,r)=>{d.classList.toggle('on',r===rows.length&&!over);const g=r<rows.length?rows[r].g:r===rows.length?cur:[];$$('.ms i',d).forEach((s,k)=>{s.style.background=g[k]!=null?COL[g[k]]:'';s.className=g[k]!=null?'f':''});
+      if(r<rows.length){const f=rows[r].f;$$('.mf u',d).forEach((u,k)=>u.className=k<f.b?'k':k<f.b+f.w?'w':'')}})}
+  function fb(g){let b=0,w=0;const c=[...code],q=[...g];for(let i=0;i<4;i++)if(g[i]===c[i]){b++;c[i]=q[i]=-1}for(let i=0;i<4;i++)if(q[i]>=0){const j=c.indexOf(q[i]);if(j>=0){w++;c[j]=-1}}return{b,w}}
+  function add(i){if(over||cur.length>=4)return;cur.push(i);X.beep(400+i*80,.06,'triangle',.2);paint()}
+  pal.onclick=e=>{const q=e.target.closest('button');if(q)add(+q.dataset.c)};
+  $('#mu',ac).onclick=()=>{if(!over&&cur.length){cur.pop();X.beep(300,.05,'sine',.15);paint()}};
+  $('#mk',ac).onclick=check;$('#mn',ac).onclick=fresh;
+  X.on(window,'keydown',e=>{if(e.key>='1'&&e.key<='6')add(+e.key-1);else if(e.key==='Backspace')$('#mu',ac).click();else if(e.key==='Enter')check()});
+  function check(){if(over)return;if(cur.length<4){st.textContent='Pick 4 colours first';X.beep(160,.12,'square',.15);return}
+    const f=fb(cur);rows.push({g:[...cur],f});cur=[];X.seq([...Array(f.b).fill(880),...Array(f.w).fill(520)].slice(0,4),.09,'square',.12);X.info('Guess '+rows.length+'/'+MAXR);
+    if(f.b===4){over=true;paint();const rec=X.score(rows.length);X.confetti();X.seq([523,659,784,1047],.1,'triangle',.25);st.textContent=`🎉 Cracked in ${rows.length}!`;X.after(()=>X.over('Code cracked!',`${rows.length} guess${rows.length>1?'es':''}${rec?' — new best! 🏆':''}`,'🎯'),1200);return}
+    if(rows.length>=MAXR){over=true;paint();X.seq([330,262,196],.2,'sawtooth',.2);st.textContent='The code was: '+code.map(c=>NM[c]).join(' · ');X.after(()=>X.over('Out of guesses','The code was '+code.map(c=>NM[c]).join(', '),'🔒'),1500);return}
+    st.textContent=`${f.b} ⚫ and ${f.w} ⚪ — keep going!`;paint()}
+  function fresh(){code=Array.from({length:4},()=>ri(0,5));rows=[];cur=[];over=false;st.textContent='Pick 4 colours, then press Check';X.info('Guess 0/'+MAXR);paint()}
+  fresh()}});
+
+/* ================= TOWER OF HANOI ================= */
+reg({id:'hanoi',name:'Tower of Hanoi',emoji:'🗼',cat:'Puzzle',c1:'#0d9488',c2:'#f59e0b',best:'low',unit:'Moves',desc:'Move the whole stack to the far tower — big never on small.',how:'Tap a tower to lift its top disc, tap another to drop it. Never place a larger disc on a smaller one.',
+start(root,X){
+  root.style.maxWidth='1100px';
+  let n=4,pegs,sel,moves,over,auto;
+  const sw=X.el('<div class="sidewrap"><div class="sm"></div></div>'),sm=$('.sm',sw);
+  const sg=X.seg([[3,'3 discs'],[4,'4 discs'],[5,'5 discs'],[6,'6 discs'],[7,'7 discs']],n,k=>{n=+k;fresh()});sm.appendChild(sg);
+  const st=X.el('<div class="status"></div>',sm),bd=X.el('<div class="hnb"></div>',sm),ac=X.el('<div class="row"><button class="btn" id="hs">▶ Solve for me</button><button class="btn pri" id="hn">Restart</button></div>',sm);
+  sw.insertAdjacentHTML('beforeend',GD({icon:'🗼',title:'How to play Tower of Hanoi',sub:'A 600-year-old puzzle. Move the stack to the right tower.',
+    vis:'<div class="hnv"><i style="width:24px"></i><i style="width:42px"></i><i style="width:60px"></i><small>Move all discs to tower 3 — one disc at a time</small></div>',
+    steps:[['Goal','Rebuild the whole stack, in the same order, on the 3rd tower.'],['Move one disc','Tap a tower to lift its top disc, then tap where it should land.'],['One rule','A bigger disc may never sit on top of a smaller one.'],['Perfect score','n discs can be solved in 2ⁿ−1 moves. Your fewest moves per size are saved.']],
+    tip:'To move a stack of n discs: move n−1 to the spare tower, move the big one, then move n−1 on top of it. Odd disc count? The smallest disc steps toward the goal first.'}));
+  for(let i=0;i<3;i++){const p=X.el(`<div class="hp" data-p="${i}"><div class="pole"></div><div class="stack"></div><em>${i+1}</em></div>`,bd)}
+  const min=()=>Math.pow(2,n)-1;
+  function render(){$$('.hp',bd).forEach((p,i)=>{p.classList.toggle('sel',sel===i);const s=$('.stack',p);s.innerHTML=pegs[i].map((d,k)=>`<b class="${sel===i&&k===pegs[i].length-1?'up':''}" style="--w:${22+d*(70/n)}%;--h:${hsl(d)}"></b>`).join('')});X.info(`Moves ${moves} / best ${min()}`)}
+  const hsl=d=>`${(d*47+160)%360}`;
+  function tap(i){if(over||auto)return;if(sel==null){if(!pegs[i].length){X.beep(160,.1,'square',.15);return}sel=i;X.beep(600,.05,'sine',.2);render();return}
+    if(sel===i){sel=null;render();return}const d=pegs[sel][pegs[sel].length-1],top=pegs[i][pegs[i].length-1];
+    if(top!=null&&top<d){X.beep(150,.2,'sawtooth',.2);X.noise(.1,.3,600);st.textContent='⛔ A bigger disc can’t go on a smaller one!';const p=$$('.hp',bd)[i];p.classList.remove('shk');void p.offsetWidth;p.classList.add('shk');return}
+    pegs[sel].pop();pegs[i].push(d);sel=null;moves++;X.noise(.05,.4,900,'bandpass');X.beep(300+d*40,.08,'triangle',.25);st.textContent='Move the stack to tower 3';render();
+    if(pegs[2].length===n){over=true;const rec=X.score(moves,String(n));X.confetti();X.seq([523,659,784,1047],.1,'triangle',.25);st.textContent=moves===min()?'🏆 Perfect! Minimum moves!':`🎉 Solved in ${moves} moves (best possible: ${min()})`;X.after(()=>X.over('Tower complete!',`${moves} moves (minimum ${min()})${rec?' — new best! 🏆':''}`,'🗼'),1200)}}
+  bd.onclick=e=>{const q=e.target.closest('.hp');if(q)tap(+q.dataset.p)};
+  X.on(window,'keydown',e=>{if(e.key>='1'&&e.key<='3')tap(+e.key-1)});
+  async function solve(){fresh();auto=true;st.textContent='🤖 Watch the solution…';const mv=[];(function h(k,a,b,c){if(!k)return;h(k-1,a,c,b);mv.push([a,b]);h(k-1,c,b,a)})(n,0,2,1);
+    for(const[a,b]of mv){if(!auto)return;await X.sleep(n>5?240:400);const d=pegs[a].pop();pegs[b].push(d);moves++;X.beep(300+d*40,.07,'triangle',.2);render()}
+    auto=false;over=true;st.textContent='🤖 Solved in the minimum '+min()+' moves — press Restart to try yourself!'}
+  $('#hs',ac).onclick=solve;
+  function fresh(){auto=false;pegs=[[...Array(n).keys()].reverse(),[],[]];sel=null;moves=0;over=false;st.textContent='Move the stack to tower 3';render()}
+  $('#hn',ac).onclick=fresh;fresh()}});
 bootHub();
 </script></body></html>
